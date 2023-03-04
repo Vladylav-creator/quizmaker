@@ -1,0 +1,21 @@
+﻿  Quiz maker.cpp
+C:\Users\mike17\source\repos\Quiz maker\Quiz maker\Quiz maker.cpp(158,49): warning C4018: '<': signed/unsigned mismatch
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xutility(5186,21): error C2676: binary '==': 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>' does not define this operator or a conversion to a type acceptable to the predefined operator
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xutility(5221): message : see reference to function template instantiation '_InIt std::_Find_unchecked1<_InIt,_Ty>(_InIt,const _InIt,const _Ty &,std::false_type)' being compiled
+          with
+          [
+              _InIt=std::basic_string<char,std::char_traits<char>,std::allocator<char>> *,
+              _Ty=int
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xutility(5227): message : see reference to function template instantiation '_InIt std::_Find_unchecked<std::basic_string<char,std::char_traits<char>,std::allocator<char>>*,_Ty>(const _InIt,const _InIt,const _Ty &)' being compiled
+          with
+          [
+              _InIt=std::basic_string<char,std::char_traits<char>,std::allocator<char>> *,
+              _Ty=int
+          ]
+C:\Users\mike17\source\repos\Quiz maker\Quiz maker\Quiz maker.cpp(151): message : see reference to function template instantiation '_InIt std::find<std::_Vector_iterator<std::_Vector_val<std::_Simple_types<_Ty>>>,int>(_InIt,const _InIt,const int &)' being compiled
+          with
+          [
+              _InIt=std::_Vector_iterator<std::_Vector_val<std::_Simple_types<std::string>>>,
+              _Ty=std::string
+          ]
