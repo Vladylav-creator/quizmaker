@@ -1,4 +1,4 @@
-﻿// Quiz maker.cpp : This file contains the 'main' function. Program execution begins and ends there.
+// Quiz maker.cpp : This file contains the 'main' function. Program execution begins and ends there.
 //
 
 #include <iostream> // c output and c input
@@ -71,6 +71,7 @@ int main()
                         cout << "To jest twoje zeszle" << endl;
                         cout << printUserWelcomeMessage(userWelcomeMessageInfo) << endl;
                         cout << endl;
+                        cout << "/*******************************************************************" << endl;
                         cout << "A zaraz terazniejrze: " << endl;
                         getline(cin, userWelcomeMessageInfo);
                         cout << "Fajne, kontynuujemy. Co dalej robimy?" << endl;
@@ -192,6 +193,8 @@ int main()
                         if (questionNumber < userMakeQuestionArray.size() && !userMakeQuestionArray.empty() && !userMakeAnswerArray.empty()) {
                             cout << "To jest twoje zeszle pytanko i odpowiedz" << endl;
                             cout << userMakeQuestionArray[questionNumber] << " : " << userMakeAnswerArray[questionNumber] << endl;
+                            cout << "/************************************************************/" << endl;
+                            cout << endl;
                             cout << "Ale zaraz bedziesz pizal terazniejsze" << endl;
                             cout << "Pytanko: ";
                            
@@ -205,8 +208,7 @@ int main()
                             getline(cin, changedAnswer);
                             userMakeAnswerArray[questionNumber] = changedAnswer;
                             cout << "Pacz, dobrze?" << endl;
-                            cout << userMakeQuestionArray[questionNumber] << endl;
-                            cout << userMakeAnswerArray[questionNumber] << endl;
+                            cout << userMakeQuestionArray[questionNumber]<<": "<< userMakeAnswerArray[questionNumber] << endl;
                             cout << endl;
                             cout << "/************************************************************/" << endl;
                         }
@@ -313,6 +315,7 @@ int main()
                          numberOfQuestion++;
                      }
                      cout << "/************************************************************/" << endl;
+                     cout << endl;
                      characterOutput("Alej jestes szybki. Widzialem jak tylko zaczynales, a juz teraz skonczyles");
                      characterOutput("Prosze zobaczyc swoje wyniki");
                      characterOutput("/**************************/");
@@ -399,6 +402,7 @@ int checkAnswer(string userAnswer, string programAnswer) {
     size_t searchedWord= userAnswer.find(programAnswer);
     if (searchedWord != string::npos) {
         cout << "Dobrze, brawo ty!" << endl;
+        transform(programAnswer.begin(), programAnswer.begin() + 1, programAnswer.begin(), ::toupper);
         cout << "Odpowiedz byla " << programAnswer << endl;
         clearConsole();
         return true;
@@ -406,6 +410,7 @@ int checkAnswer(string userAnswer, string programAnswer) {
     else {
         cout << "/****************************************************************************" << endl;
         cout << "Wiem ze jestes madry, ale ucz sie wiecej, bo nauka to potegi klucz" << endl;
+        transform(programAnswer.begin(), programAnswer.begin() + 1, programAnswer.begin(), ::toupper);
         cout << "Odpowiedz byla " << programAnswer << endl;
         clearConsole();
         return false;
